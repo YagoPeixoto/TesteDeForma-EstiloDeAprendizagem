@@ -1,0 +1,285 @@
+body {
+    background: #ffffff;
+    color: #666666;
+    font-family: 'RobotoDraft', 'Roboto', sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.title {
+    padding: 50px 0;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.title h1 {
+    margin: 0 0 20px;
+    font-size: 48px;
+    font-weight: 300;
+}
+
+.title span {
+    color: #0D701F;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.title span .fa{
+    color: #0D701F;
+}
+
+.title span a {
+    color: #0D701F;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+
+.pergunta {
+    font-size: 22px;
+    color: #212121;
+    font-weight: 600;
+    text-decoration: none;
+
+}
+
+/* Container */
+.container {
+    position: relative;
+    max-width: 660px;
+    width: 100%;
+    margin: 0 auto 100px;
+}
+
+.container.active .card:first-child {
+    background: #f2f2f2;
+    margin: 0 15px;
+}
+
+.container.active .card:nth-child(2) {
+    background: #fafafa;
+    margin: 0 10px;
+}
+
+.container.active .card.alt {
+    top: 20px;
+    right: 0;
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    padding: 60px 0 40px;
+    overflow: hidden;
+}
+
+.container.active .card.alt .toggle {
+    position: absolute;
+    top: 40px;
+    right: -70px;
+    box-shadow: none;
+    -webkit-transform: scale(10);
+    transform: scale(10);
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease, -webkit-transform .3s ease;
+}
+.container.active .card.alt .toggle:before {
+    content: '';
+}
+.container.active .card.alt .title,
+.container.active .card.alt .input-container,
+.container.active .card.alt .button-container {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+.container.active .card.alt .title {
+    -webkit-transition-delay: .3s;
+    transition-delay: .3s;
+}
+.container.active .card.alt .input-container {
+    -webkit-transition-delay: .4s;
+    transition-delay: .4s;
+}
+.container.active .card.alt .input-container:nth-child(2) {
+    -webkit-transition-delay: .5s;
+    transition-delay: .5s;
+}
+.container.active .card.alt .input-container:nth-child(3) {
+    -webkit-transition-delay: .6s;
+    transition-delay: .6s;
+}
+.container.active .card.alt .button-container {
+    -webkit-transition-delay: .7s;
+    transition-delay: .7s;
+}
+
+.card {
+    position: relative;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 60px 0 40px 0;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+
+}
+.card:first-child {
+    background: #fafafa;
+    height: 10px;
+    border-radius: 5px 5px 0 0;
+    margin: 0 10px;
+    padding: 0;
+}
+.card .title {
+    position: relative;
+    z-index: 1;
+    border-left: 5px solid #0D701F;
+    margin: 0 0 35px;
+    padding: 10px 0 10px 50px;
+    color: #0D701F;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.card .button-container {
+    margin: 0 60px;
+    text-align: center;
+}
+.card .button-container button {
+    outline: 0;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    background: 0;
+    width: 240px;
+    border: 2px solid #e3e3e3;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    overflow: hidden;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+.card .button-container button span {
+    position: relative;
+    z-index: 1;
+    color: #ddd;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+.card .button-container button:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    background: #0D701F;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: -15px 0 0 -15px;
+    opacity: 0;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+.card .button-container button:hover, .card .button-container button:active, .card .button-container button:focus {
+    border-color: #0D701F;
+}
+.card .button-container button:hover span, .card .button-container button:active span, .card .button-container button:focus span {
+    color: #0D701F;
+}
+.card .button-container button:active span, .card .button-container button:focus span {
+    color: #ffffff;
+}
+.card .button-container button:active:before, .card .button-container button:focus:before {
+    opacity: 1;
+    -webkit-transform: scale(10);
+    transform: scale(10);
+}
+.card .footer {
+    margin: 40px 0 0;
+    color: #d3d3d3;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+}
+.card .footer a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+.card .footer a:hover {
+    color: #bababa;
+}
+.card.alt {
+    position: absolute;
+    top: 40px;
+    right: -70px;
+    z-index: 10;
+    width: 140px;
+    height: 140px;
+    background: none;
+    border-radius: 100%;
+    box-shadow: none;
+    padding: 0;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+
+}
+/*reset zerar margens e padding, além de retirar a borda padrão dos fieldsets. */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+fieldset {
+    border: 0;
+}
+
+body, input, select, textarea, button {
+    font-family: sans-serif;
+    font-size: 1em;
+}
+
+.grupo:before, .grupo:after {
+    content: " ";
+    display: table;
+}
+
+.grupo:after {
+    clear: both;
+}
+
+/*divs e tags label*/
+.campo {
+    margin-bottom: 0;
+}
+
+.campo label {
+    margin-bottom: 0.2em;
+    color: #212121;
+    display: block;
+}
+
+fieldset.grupo .campo {
+    float:  left;
+    margin-right: 1em;
+}
+
+p {
+    margin: 0 0 20px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #212121;
+}

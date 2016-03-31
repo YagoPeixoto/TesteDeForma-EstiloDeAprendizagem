@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/ValidarProjetoCm1.js"></script>
+    <title>Cadastro</title>
+    <link rel="stylesheet" type="text/css" href="css/ProjetoEstilo.css">
+    <link rel="stylesheet" type="text/css" href="css/EstiloLogin.css">
+    <link rel="stylesheet" type="text/css" href="css/Reset.css">
+    <script type="text/javascript" src="js/Inicio.js"></script>
+</head>
+<body>
+<p class="text-center">
+    <a href="https://www.ifgoiano.edu.br/home/" target="_blank"> <img src="l.png"></a>
+</p>
+
+<div id="menu">
+    <div id="lateral">
+        <ul class="box">
+            <li><a href="TelaInicio.html">Inicio</a></li>
+            <li><a href="Login.html">Fazer Login</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="rerun"><a href="TelaInicio.html">Início</a></div>
+<div class="container">
+    <div class="card"></div>
+    <div class="card">
+        <h1 class="title">Cadastro Aluno</h1>
+
+        <form>
+            <div class="input-container">
+                <input pattern="^[A-Za-z]{6,80}$" type="text" id="nome" required="required"/>
+                <label for="nome">Nome Completo</label>
+
+                <div class="bar"></div>
+            </div>
+
+            <div class="input-container">
+                <input pattern="^[0-9]{1,20}$" type="text" id="matricula" required="required"/>
+                <label for="matricula">N° Matricula</label>
+
+                <div class="bar"></div>
+            </div>
+
+            <div class="input-container">
+                <input type="email" id="email" required="required"/>
+                <label for="email">E-mail</label>
+
+                <div class="bar"></div>
+            </div>
+
+            <div class="input-container">
+                <input pattern="^\d{2}-\d{4}-\d{4}$" type="tel" id="tefefone"
+                       placeholder="              Ex: 64-0000-0000" required="required"/>
+                <label for="tefefone">Telefone</label>
+
+                <div class="bar"></div>
+            </div>
+
+            <div class="input-container">
+                <input pattern="^[\D]{1,50}$" type="text" id="endereco" required="required"/>
+                <label for="endereco">Endereço</label>
+
+                <div class="bar"></div>
+            </div>
+
+            <div class="input-container">
+                <input pattern="^[0-9]{1,20}$" type="text" id="num" required="required"/>
+                <label for="num">N° Endereço</label>
+
+                <div class="bar"></div>
+            </div>
+
+
+            <div class="input-container">
+                <input pattern="^[\w]{1,10}$" type="text" id="serie" required="required"/>
+                <label for="serie">Serie</label>
+
+                <div class="bar"></div>
+            </div>
+
+            <div class="input-container">
+                <input pattern="^[\w]{6,20}$" type="password" id="senha" required="required"/>
+                <label for="senha">Senha</label>
+
+                <div class="bar"></div>
+            </div>
+            <div class="button-container">
+                <button>Cadastrar</button>
+                <br><br>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+
+</body>
+</html>

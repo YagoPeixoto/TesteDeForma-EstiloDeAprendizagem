@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="js/ValidarProjetoCm1.js"></script>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/ProjetoEstilo.css">
+    <link rel="stylesheet" type="text/css" href="css/EstiloLogin.css">
+    <script type="text/javascript" src="js/Inicio.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/Reset.css">
+
+</head>
+<body>
+<p class="text-center">
+<a href="https://www.ifgoiano.edu.br/home/" target="_blank"> <img src="l.png"></a>
+</p>
+<div id="menu">
+    <div id="lateral">
+        <ul class="box">
+            <li><a href="TelaInicio.html">Inicio</a></li>
+            <li><a href="CadastroAluno.html">Cadastro Aluno</a></li>
+            <li><a href="CadastroFuncionario.html">Cadastro Funcionário </a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="rerun"><a href="TelaInicio.html">Início</a></div>
+<div class="container">
+    <div class="card"></div>
+    <div class="card">
+
+        <h1 class="title">Login</h1><br>
+
+        <h1 class="title">Entre com E-mail ou Siape</h1>
+
+
+        <form>
+            <div class="input-container">
+                <input type="email" id="email" required="required"/>
+                <label for="email">E-mail ou Siape</label>
+
+                <div class="bar"></div>
+            </div>
+
+            <div class="input-container">
+                <input pattern="^[\w]{6,20}$" type="password" id="senha" required="required"/>
+                <label for="senha">Senha</label>
+
+                <div class="bar"></div>
+            </div>
+
+            <div class="button-container">
+                <button type="button" onclick="enviarLogin()"><span>Entrar</span></button>
+            </div>
+
+            <div class="footer"><a href="#">Esqueceu a Senha?</a></div>
+            <div class="footer"><a href="LoginEditarInforma.html">Editar informações</a></div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
