@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script type="text/javascript">
+    var atual = 1;
+    var nroParts = 4;
+
+    function avancar() {
+      if (atual < nroParts) {
+        document.querySelector(".part" + atual).style.display = "none";
+        atual++;
+        document.querySelector(".part" + atual).style.display = "block";
+      }
+
+    }
+
+    function voltar() {
+      if (atual > 1) {
+        document.querySelector(".part" + atual).style.display = "none";
+        atual--;
+        document.querySelector(".part" + atual).style.display = "block";
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <div class="part1" style="background: red; height: 200px; width: 200px; display:block">
+  </div>
+  <div class="part2" style="background: green; height: 200px; width: 200px; display:none">
+  </div>
+  <div class="part3" style="background: blue; height: 200px; width: 200px; display:none">
+  </div>
+  <div class="part4" style="background: black; height: 200px; width: 200px; display:none">
+  </div>
+  <input type="button" value="Voltar" onclick="voltar()" />
+  <input type="button" value="Avançar" onclick="avancar()" />
+</body>
+
+</html>
