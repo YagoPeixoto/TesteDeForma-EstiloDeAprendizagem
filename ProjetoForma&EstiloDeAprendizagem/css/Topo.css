@@ -29,3 +29,20 @@
     color: #ddd;
     padding: 10px 0;
 }
+.font-cor{
+    font-size: 25px;
+    color: #006400;
+
+}
+.font-cor-t{
+    font-size: 18px;
+    color: #006400;
+}
+
+.font-tam{
+    font-size: 16px;
+}
+
+a:link{
+    text-decoration:none;
+}
