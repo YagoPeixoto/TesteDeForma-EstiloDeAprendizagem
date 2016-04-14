@@ -2,7 +2,6 @@ function enviardados() {
     //quest1
     if (document.formulario.sexos[0].checked == false &&
         document.formulario.sexos[1].checked == false) {
-        alert("Selecione o Sexo!");
         document.formulario.sexos.focus();
         return false;
     }
@@ -15,7 +14,6 @@ function enviardados() {
         document.formulario.idade[4].checked == false &&
         document.formulario.idade[5].checked == false) {
 
-        alert("Selecione a Idade!");
         document.formulario.idade.focus();
         return false;
     }
@@ -26,13 +24,11 @@ function enviardados() {
         document.formulario.cor[3].checked == false &&
         document.formulario.cor[4].checked == false) {
 
-        alert("Selecione a cor!");
         document.formulario.cor.focus();
         return false;
     }
     //quest4
     if (document.formulario.cidade.value == "") {
-        alert("Por favor, Informe a cidade!");
         document.formulario.cidade.focus();
         return false;
     }
@@ -44,7 +40,6 @@ function enviardados() {
         document.formulario.moraCvc[4].checked == false &&
         document.formulario.moraCvc[5].checked == false) {
 
-        alert("Por favor, Informe quem mora com você!");
         return false;
     }
     //quest6
@@ -55,7 +50,6 @@ function enviardados() {
         document.formulario.Npessoas[4].checked == false &&
         document.formulario.Npessoas[5].checked == false) {
 
-        alert("Por favor, Informe quantas pessoas moram com você!");
         document.formulario.Npessoas.focus();
         return false;
     }
@@ -70,7 +64,6 @@ function enviardados() {
         document.formulario.escolaridadePai[7].checked == false &&
         document.formulario.escolaridadePai[8].checked == false) {
 
-        alert("Por favor, Informe a escolaridade do seu Pai!");
         document.formulario.escolaridadePai.focus();
         return false;
     }
@@ -85,7 +78,6 @@ function enviardados() {
         document.formulario.escolaridadeMae[7].checked == false &&
         document.formulario.escolaridadeMae[8].checked == false) {
 
-        alert("Por favor, Informe escolaridade da sua Mãe!");
         document.formulario.escolaridadeMae.focus();
         return false;
     }
@@ -96,7 +88,6 @@ function enviardados() {
         document.formulario.QuemTrabalha[3].checked == false &&
         document.formulario.QuemTrabalha[4].checked == false) {
 
-        alert("Por favor, Informe quem trabalha na sua casa!");
         document.formulario.QuemTrabalha.focus();
         return false;
     }
@@ -107,7 +98,6 @@ function enviardados() {
         document.formulario.renda[3].checked == false &&
         document.formulario.renda[4].checked == false) {
 
-        alert("Por favor, informe sua renda!");
         document.formulario.renda.focus();
         return false;
     }
@@ -116,11 +106,9 @@ function enviardados() {
         document.formulario.auxF[1].checked == false) {
         if (document.formulario.auxF[0] == true &&
             document.formulario.quaisAux == "") {
-            alert("Informe quais");
             document.formulario.quaisAux.focus();
             return false;
         }
-        alert("informe se recebe auxílio");
         document.formulario.auxF.focus();
         return false;
     }
@@ -129,11 +117,9 @@ function enviardados() {
         document.formulario.auxE[1].checked == false) {
         if (document.formulario.auxE[0] == true &&
             document.formulario.quaisAux == "") {
-            alert("informe quais");
             document.formulario.quaisAux.focus();
             return false;
         }
-        alert("informe se recebe auxílio ou bolsa de estudo");
         document.formulario.auxE.focus();
         return false;
     }
@@ -142,7 +128,6 @@ function enviardados() {
         document.formulario.serie[1].checked == false &&
         document.formulario.serie[2].checked == false) {
 
-        alert("Por favor, Selecione a serie!");
         document.formulario.serie.focus();
         return false;
     }
@@ -151,7 +136,6 @@ function enviardados() {
         document.formulario.cTec[1].checked == false &&
         document.formulario.cTec[2].checked == false) {
 
-        alert("Por favor, Informe seu curso!");
         document.formulario.cTec.focus();
         return false;
     }
@@ -162,7 +146,6 @@ function enviardados() {
             document.formulario.quaisSeries == "" &&
             document.formulario.quantasVezes == "") {
 
-            alert("Preencha os campos");
             document.formulario.quaisSeries.focus();
             document.formulario.quantasVezes.focus();
             return false;
@@ -174,7 +157,6 @@ function enviardados() {
         document.formulario.acomp[1].checked == false) {
         if (document.formulario.acomp[0] == true &&
             document.formulario.quaisAcomp == "") {
-            alert("Informe qual(is) acompanhamento já teve");
             document.formulario.quaisAcomp.focus();
             return false;
         }
@@ -186,7 +168,6 @@ function enviardados() {
         document.formulario.formaApren[2].checked == false &&
         document.formulario.formaApren[3].checked == false){
 
-        alert("Informe sua forma de aprendizagem");
         document.formulario.formaApren.focus();
         return false;
     }
@@ -196,7 +177,6 @@ function enviardados() {
         document.formulario.estiloaApren[2].checked == false &&
         document.formulario.estiloaApren[3].checked == false){
 
-        alert("Informe seu estilo");
         document.formulario.estiloaApren.focus();
         return false;
     }
@@ -207,20 +187,27 @@ function enviardados() {
         document.formulario.escolas[3].checked == false){
             if(document.formulario.escolas[3] == true &&
                 document.formulario.quaisEscolas == ""){
-                    alert("Informe quais escolas");
                     document.formulario.quaisEscolas.focus();
                 return false;
             }
         return false;
     }
     //quest20
+    if(document.formulario.cursosExtra[0].checked == false &&
+        document.formulario.cursosExtra[1].checked == false &&
+        document.formulario.cursosExtra[2].checked == false &&
+        document.formulario.cursosExtra[3].checked == false &&
+        document.formulario.cursosExtra[4].checked == false){
 
+        document.formulario.cursosExtra.focus();
+        return false;
+    }
     //quest21
     if(document.formulario.esporte[0].checked == false &&
         document.formulario.esporte[1].checked == false){
             if(document.formulario.esporte[0] == true &&
                 document.formulario.quaisEsportes == ""){
-                    alert("Informe os esportes");
+
                 document.formulario.quaisEsportes.focus();
                 return false;
             }
@@ -237,7 +224,6 @@ function enviardados() {
         document.formulario.leitura[7].checked == false &&
         document.formulario.leitura[8].checked == false){
 
-        alert("informe oque você gosta de ler");
         document.formulario.leitura.focus();
         return false;
     }
@@ -246,7 +232,6 @@ function enviardados() {
         document.formulario.frequencia[1].checked == false &&
         document.formulario.frequencia[2].checked == false){
 
-        alert("informe sua frequência de leitura");
         document.formulario.frequencia.focus();
         return false;
     }
@@ -258,7 +243,6 @@ function enviardados() {
         document.formulario.aposEnsinoMedio[4].checked == false &&
         document.formulario.aposEnsinoMedio[5].checked == false){
 
-        alert("Informe sua decisão após conluir ensino medio");
         document.formulario.aposEnsinoMedio.focus();
         return false;
     }
@@ -266,7 +250,6 @@ function enviardados() {
     if(document.formulario.pcCasa[0].checked == false &&
         document.formulario.pcCasa[1].checked == false){
 
-        alert("Informe se possuiu computador pessoal em casa");
         document.formulario.pcCasa.focus();
         return false;
     }
@@ -274,15 +257,30 @@ function enviardados() {
     if(document.formulario.netCasa[0].checked == false &&
         document.formulario.netCasa[1].checked == false){
 
-        alert("Informe se possui internet em casa");
         document.formulario.netCasa.focus();
         return false;
     }
     //quest27
+    if(document.formulario.redeSociais[0].checked == false &&
+        document.formulario.redeSociais[1].checked == false &&
+        document.formulario.redeSociais[2].checked == false &&
+        document.formulario.redeSociais[3].checked == false &&
+        document.formulario.redeSociais[4].checked == false &&
+        document.formulario.redeSociais[5].checked == false){
 
+        if(document.formulario.redeSociais == document.formualrio.redeSociais[5] &&
+            document.formualrio.quaisRedes == ""){
+
+            document.formulario.quaisRedes.focus();
+            return false;
+        }
+
+        document.formalurio.redeSociais.focus();
+        return false;
+
+    }
     //quest 28
     if(document.formulario.tempoNetDia == ""){
-        alert("Informe quanto tempo você passa na internet");
         document.formulario.tempoNetDia.focus();
         return false;
     }
