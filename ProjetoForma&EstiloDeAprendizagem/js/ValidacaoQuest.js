@@ -185,11 +185,11 @@ function enviardados() {
         document.formulario.escolas[1].checked == false &&
         document.formulario.escolas[2].checked == false &&
         document.formulario.escolas[3].checked == false){
-            if(document.formulario.escolas[3] == true &&
-                document.formulario.quaisEscolas == ""){
-                    document.formulario.quaisEscolas.focus();
-                return false;
-            }
+        if(document.formulario.escolas[3] == true &&
+            document.formulario.quaisEscolas == ""){
+            document.formulario.quaisEscolas.focus();
+            return false;
+        }
         return false;
     }
     //quest20
@@ -205,12 +205,12 @@ function enviardados() {
     //quest21
     if(document.formulario.esporte[0].checked == false &&
         document.formulario.esporte[1].checked == false){
-            if(document.formulario.esporte[0] == true &&
-                document.formulario.quaisEsportes == ""){
+        if(document.formulario.esporte[0] == true &&
+            document.formulario.quaisEsportes == ""){
 
-                document.formulario.quaisEsportes.focus();
-                return false;
-            }
+            document.formulario.quaisEsportes.focus();
+            return false;
+        }
         return false;
     }
     //quest22
