@@ -31,7 +31,7 @@
 
         <form>
             <div class="input-container">
-                <input pattern="^[A-Za-z]{6,80}$" type="text" id="nome" required="required"/>
+                <input pattern="^[\D]{6,80}$" type="text" id="nome" required="required"/>
                 <label for="nome">Nome Completo</label>
 
                 <div class="bar"></div>
@@ -52,8 +52,8 @@
             </div>
 
             <div class="input-container">
-                <input pattern="^\d{2}-\d{4}-\d{4}$" type="tel" id="tefefone"
-                       placeholder="              Ex: 64-0000-0000" required="required"/>
+                <input pattern="^\d{2}\d{4}\d{4}$" type="tel" id="tefefone"
+                       placeholder="              Ex: 6488888888" required="required"/>
                 <label for="tefefone">Telefone</label>
 
                 <div class="bar"></div>
@@ -75,7 +75,7 @@
 
 
             <div class="input-container">
-                <input pattern="^[\w]{1,10}$" type="text" id="serie" required="required"/>
+                <input pattern="^[\w\s\w]{2,20}$" type="text" id="serie" required="required"/>
                 <label for="serie">Serie</label>
 
                 <div class="bar"></div>
