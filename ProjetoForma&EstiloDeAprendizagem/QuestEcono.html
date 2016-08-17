@@ -6,13 +6,12 @@
     <link rel="stylesheet" type="text/css" href="css/ProjetoEstilo.css">
     <link rel="stylesheet" type="text/css" href="css/Topo.css">
     <link rel="stylesheet" type="text/css" href="css/EstiloQuest.css">
-    <link rel="stylesheet" type="text/css" href="js/ValidacaoQuest.js">
-
+    <script type="text/javascript" href="js/ValidacaoQuest.js"></script>
+    <script type="text/javascript" src="js/TransiçãoQuest.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/DesignerBotao-Menu.css">
     <script type="text/javascript" src="js/Inicio.js"></script>
 </head>
 <body>
-
-
 <div id="menu">
     <div id="lateral">
         <ul class="box">
@@ -31,20 +30,22 @@
         <h1 class="title">Questionário socioeconômico e educacional</h1>
 
         <form action="#" id="form" method="post">
-            <fieldset>
-                <fieldset class="grupo">
-                    <div class="campo">
-                        <label><span class="pergunta"> 1. Qual o seu sexo?<br><br></span></label>
-                        <label class="checkbox">
-                            <input type="radio" value="mulher" name="sexos">Feminino.<br>
-                        </label>
-                        <label class="checkbox">
-                            <input type="radio" value="homem" name="sexos">Masculino.<br><br>
-                        </label>
-                    </div>
-                </fieldset>
+            <div>
+                <div class="part1">
+                    <label><span class="pergunta"> 1. Qual o seu sexo?<br><br></span></label>
+                    <label class="checkbox">
+                        <input type="radio" value="mulher" name="sexos">Feminino.<br>
+                    </label>
+                    <label class="checkbox">
+                        <input type="radio" value="homem" name="sexos">Masculino.<br><br>
+                    </label>
 
-                <div class="campo">
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 2" onclick="avancar()"><br><br>
+                    </div>
+                </div>
+
+                <div class="part2">
                     <label><span class="pergunta"> 2. Qual a sua idade?<br><br></span></label>
                     <label>
                         <input type="radio" value="14" name="idade">14 anos ou menos.<br>
@@ -54,9 +55,14 @@
                         <input type="radio" value="18a21" name="idade">Entre 18 e 21 anos.<br>
                         <input type="radio" value="21" name="idade">Mais de 21 anos.<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 3" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part3">
                     <label><span class="pergunta">3. Como você se considera?<br><br></span></label>
                     <label>
                         <input type="radio" value="branco" name="cor">Branco(a).<br>
@@ -65,18 +71,28 @@
                         <input type="radio" value="amarelo" name="cor">Amarelo(a).<br>
                         <input type="radio" value="indigena" name="cor">Indígena.<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 4" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
+                </div>
+                <div class="part4">
+                    <div class="input-container">
+                        <label><span class="pergunta">4. Cidade onde mora?<br><br></span></label>
+                        <label>
+                            <input name="cidade" type="text"><br><br>
+                        </label>
+
+                        <div class="bar"></div>
+                        <div class="text-center">
+                            <input type="button" class="botao btgrande" value="Questão 5" onclick="avancar()"><br><br>
+                            <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="input-container">
-                    <label><span class="pergunta">4. Cidade onde mora?<br><br></span></label>
-                    <label>
-                        <input name="cidade" type="text"><br><br>
-                    </label>
-
-                    <div class="bar"></div>
-                </div>
-
-                <div class="campo">
+                <div class="part5">
 
                     <label><span class="pergunta">5. Quem mora com você?<br><br></span></label>
                     <label>
@@ -88,9 +104,14 @@
                         colegas<br>
                         <input type="checkbox" value="outros" name="moraCvc">Outra situação<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 6" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part6">
 
                     <label><span class="pergunta">6. Quantas pessoas moram em sua casa?<br>
                 (Contando com seus pais, irmãos ou outras pessoas que moram em uma mesma casa).<br><br>
@@ -103,9 +124,14 @@
                         <input type="radio" value="6" name="Npessoas">Mais de seis.<br>
                         <input type="radio" value="sozinho" name="Npessoas">Moro sozinho.<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 7" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part7">
 
                     <label><span class="pergunta">7. Até quando seu pai estudou?<br><br></span></label>
                     <label>
@@ -128,9 +154,14 @@
                         <input type="radio" value="pos-graduado" name="escolaridadePai">Pós-graduação.<br>
                         <input type="radio" value="Nsei" name="escolaridadePai">Não sei.<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 8" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part8">
 
                     <label><span class="pergunta">8. Até quando sua mãe estudou?<br><br></span></label>
                     <label>
@@ -153,9 +184,14 @@
                         <input type="radio" value="pos-graduado" name="escolaridadeMae">Pós-graduação.<br>
                         <input type="radio" value="Nsei" name="escolaridadeMae">Não sei.<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 9" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part9">
 
                     <label><span class="pergunta">9. Marque quem, na sua casa, trabalha:<br><br></span></label>
                     <label>
@@ -165,9 +201,14 @@
                         <input type="checkbox" value="irmaos" name="QuemTrabalha">Irmãos<br>
                         <input type="checkbox" value="outros" name="QuemTrabalha">Outros<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 10" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part10">
 
                     <label><span class="pergunta"> 10. Somando a sua renda com a renda das pessoas que moram com você, quanto é, aproximadamente, a renda
                 familiar?<br>
@@ -179,9 +220,14 @@
                         <input type="radio" value="5salarios" name="renda">Mais de 5 salários mínimos.<br>
                         <input type="radio" value="semRenda" name="renda">Nenhuma renda.<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 11" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part11">
 
                     <label><span
                             class="pergunta"> 11. Na sua casa alguém recebe algum auxílio financeiro do governo?<br><br></span></label>
@@ -190,9 +236,14 @@
                         <input type="radio" value="auxFinaN" name="auxF">Não<br>
                         Se sim, qual(is)?<input name="quaisAux" type="text"><br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 12" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part12">
 
                     <label><span
                             class="pergunta"> 12. Você recebe algum tipo de auxílo ou bolsa para os estudos?<br><br></span></label>
@@ -201,9 +252,14 @@
                         <input type="radio" value="auxEstuN" name="auxE">Não<br>
                         Se sim, qual(is)?<input name="quaisAux" type="text"><br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 13" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part13">
 
                     <label><span class="pergunta"> 13. Em que série do ensino médio você está?<br><br></span></label>
                     <label>
@@ -211,9 +267,14 @@
                         <input type="radio" value="2" name="serie">2º<br>
                         <input type="radio" value="3" name="serie">3º<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 14" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part14">
 
                     <label><span class="pergunta"> 14. Qual o seu curso técnico:<br><br></span></label>
                     <label>
@@ -221,9 +282,14 @@
                         <input type="radio" value="ta" name="cTec">Técnico em Alimentos.<br>
                         <input type="radio" value="ti" name="cTec">Técnico em Informática<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 15" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part15">
 
                     <label><span
                             class="pergunta"> 15. Já reprovou alguma vez em sua vida escolar?<br><br></span></label>
@@ -233,9 +299,14 @@
                         Se sim, qual(is) série(es)?<input name="quaisSeries" type="text"><br>
                         Se sim, quantas vezes reprovou?<input name="quantasVezes" type="number"><br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 16" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part16">
 
                     <label><span
                             class="pergunta"> 16. Durante sua vida escolar você teve algum tipo de acompanhamento:<br>
@@ -247,9 +318,14 @@
                         acompanhamento.<br>
                         Se sim, qual(is)?<input name="quaisAcomp" type="text"><br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 17" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part17">
 
                     <label><span class="pergunta"> 17. Diante do seu teste de forma e estilo individual de aprendizagem, qual foi o resultado?<br>
                 Forma de aprendizagem:<br><br></span></label>
@@ -259,9 +335,15 @@
                         <input type="radio" value="ca" name="formaApren">Conceitualização Abstrata<br>
                         <input type="radio" value="ea" name="formaApren">Experimentação Ativa<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 18" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
+
                 </div>
 
-                <div class="campo">
+                <div class="part18">
 
                     <label><span class="pergunta"> 18. Estilo de aprendizagem:<br><br></span></label>
                     <label>
@@ -270,9 +352,14 @@
                         <input type="radio" value="ed" name="estiloaApren">Estilo Divergente<br>
                         <input type="radio" value="ea2" name="estiloaApren">Estilo assimilador<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 19" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part19">
 
                     <label><span
                             class="pergunta">19. Em que tipo de escola você cursou o ensino fundamental?<br><br></span></label>
@@ -284,9 +371,14 @@
                         <input type="radio" value="outras" name="escolas">Outras<br>
                         Se Outras, qual(is)?<input name="quaisEscolas" type="text"><br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 20" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part20">
 
                     <label><span class="pergunta">20. Você ja fez algum curso extracurricular?<br><br></span></label>
                     <label>
@@ -297,9 +389,14 @@
                         etc)<br>
                         <input type="checkbox" value="outros" name="cursosExtra">Outros<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 21" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part21">
 
                     <label><span
                             class="pergunta">21. Você pratica alguma atividade física/esporte?<br><br></span></label>
@@ -308,9 +405,14 @@
                         <input type="radio" value="esporteN" name="esporte">Não<br>
                         Se sim, qual(is)?<input name="quaisEsportes" type="text"><br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 22" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part22">
 
                     <label><span class="pergunta">22. Oquê gosta de ler?<br><br></span></label>
                     <label>
@@ -330,9 +432,14 @@
                         manuais.<br>
                         <input type="checkbox" value="sites" name="leitura">Sites e matérias na Internet.<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 23" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part23">
 
                     <label><span class="pergunta">23. Qual a sua frequência vc lê?<br><br></span></label>
                     <label>
@@ -340,9 +447,14 @@
                         <input type="radio" value="asVezes" name="frequencia">Às vezes<br>
                         <input type="radio" value="nunca" name="frequencia">Nunca<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 24" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part24">
 
                     <label><span class="pergunta">24. Qual é a principal decisão que você vai tomar quando concluir ou obter a certificação do ensino
                 médio?<br><br></span></label>
@@ -363,9 +475,14 @@
                         negócio da família. <br>
                         <input type="radio" value="Semdecisão" name="aposEnsinoMedio">Ainda não decidi.<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 25" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part25">
 
                     <label><span
                             class="pergunta">25. Você possui computador para uso pessoal em casa?<br><br></span></label>
@@ -373,18 +490,28 @@
                         <input type="radio" value="pcS" name="pcCasa">Sim<br>
                         <input type="radio" value="pcN" name="pcCasa">Não<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 26" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part26">
 
                     <label><span class="pergunta">26. Você tem acesso a internet em casa?<br><br></span></label>
                     <label>
                         <input type="radio" value="netS" name="netCasa">Sim<br>
                         <input type="radio" value="netN" name="netCasa">Não<br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 27" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part27">
 
                     <label><span class="pergunta">27. Qual(is) rede(s) social(is) você utiliza?<br><br></span></label>
                     <label>
@@ -396,21 +523,30 @@
                         <input type="checkbox" value="outros" name="redeSociais">Outros<br>
                         Se marcou Outros, qual(is)?<br><input name="quaisRedes" type="text"><br><br>
                     </label>
+
+                    <div class="text-center">
+                        <input type="button" class="botao btgrande" value="Questão 28" onclick="avancar()"><br><br>
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+                    </div>
                 </div>
 
-                <div class="campo">
+                <div class="part28">
                     <label><span
                             class="pergunta">28. Quanto tempo por dia voçê utiliza a internet?</span></label>
                     <label>
                         <input name="tempoNetDia" type="text"><br><br><br>
                     </label>
-                </div>
 
-                <div class="button-container">
-                    <button type="button" onclick="enviardados()">Enviar</button>
-                    <br><br>
+                    <div class="text-center">
+                        <input type="button" class="botao btpequeno" value="Voltar" onclick="voltar()"/><br><br>
+
+                        <div class="button-container">
+                            <button type="button" onclick="enviardados()">Enviar</button>
+                            <br><br>
+                        </div>
+                    </div>
                 </div>
-            </fieldset>
+            </div>
         </form>
     </div>
 </div>
