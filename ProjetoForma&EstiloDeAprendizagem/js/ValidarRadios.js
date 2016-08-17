@@ -11,7 +11,7 @@ for(let i = 0; i< radios.length; i++){
 
 window.addEventListener('load', ()=>{
     var radios = document.querySelectorAll(".questao2");
-for(let i = 0; i< radios.length; i++){zz
+for(let i = 0; i< radios.length; i++){
     var radio = radios[i];
     radio.addEventListener('change',verificaRadioMarcado);
 }
